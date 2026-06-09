@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+*,
 *::after,
 *::before {
     box-sizing: border-box;
@@ -13,11 +14,14 @@ body {
     font-family: 'Alumni Sans';
     background-color: rgba(221, 221, 221, 0.349);
     margin: 0;
-    overflow-x: hidden;
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 main {
@@ -27,7 +31,8 @@ main {
 }
 
 section {
-    padding: 100px 50px;
+    width: 100%;
+    padding: 100px clamp(20px, 5vw, 50px);
 }
 
 
@@ -48,14 +53,14 @@ header {
 
 
 .logo {
-    height: 100px;
+    height: 80px;
     width: auto;
     display: block;
 }
 
 nav ul {
     display: flex;
-    gap: .2rem;
+    gap: .35rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -65,11 +70,9 @@ nav ul li a {
     text-decoration: none;
     color: #0d3c5d;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 7px 8px;
     border-radius: 6px;
-    position: relative;
-    left: -35px;
     transition: 
         color 0.2s,
         background 0.2s,
@@ -87,13 +90,14 @@ nav ul li a:focus {
     box-shadow: 0 2px 8px rgba(0,114,198,0.13);
 }
 
-.Social {
+.icon {
     display: flex;
     gap: 1.1rem;
     align-items: center;
+    height: 25px;
 }
 
-.Social a img {
+.icon img {
     width: 25px;
     height: 25px;
     display: block;
@@ -101,8 +105,8 @@ nav ul li a:focus {
     filter: grayscale(30%);
 }
 
-.Social a:hover img,
-.Social a:focus img {
+.icon:hover img,
+.icon:focus-within img {
     filter: none;
     transform: scale(1.08);
 }
@@ -125,7 +129,7 @@ nav ul li a:focus {
         margin-left: auto;
         margin-right: auto;
     }
-    .Social {
+    .icon {
       display: none;
     }
 
@@ -215,7 +219,7 @@ nav ul li a:focus {
     color: var(--color-blue-1);
   }
 
-  .header .icon {
+  header .icon {
     display: none;
   }
 
@@ -268,7 +272,20 @@ nav ul li a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    gap: 40px;
+    padding: 50px clamp(20px, 5vw, 50px);
+}
+
+.hero-Section .left,
+.hero-Section .right {
+    flex: 1 1 0;
+}
+
+.hero-Section .left img {
+    display: block;
+    width: min(100%, 520px);
+    height: auto;
+    margin-inline: auto;
 }
 
 
@@ -313,8 +330,7 @@ nav ul li a:focus {
     }
 
     .hero-Section .left img{
-        width: 100%;
-        width: 300px;
+        width: min(100%, 300px);
     }
 
     .hero-Section .right h1{
@@ -334,9 +350,13 @@ nav ul li a:focus {
     }
     
     .hero-Section .right .btn{
+        display: inline-flex;
+        justify-content: center;
         width: 100%;
+        
         max-width: 280px;
         padding: 10px 5px;
+        margin-bottom: 10px;
     }
 }
 
@@ -375,14 +395,14 @@ nav ul li a:focus {
 /* .Habilidades  */
 
 .Habilidades{
-    width: 90%;
+    width: 100%;
     min-height: 100vh;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 8%;
+    padding: 0 clamp(20px, 8vw, 8%);
     gap: 40px;
 }
 
@@ -430,6 +450,8 @@ nav ul li a:focus {
         flex-direction: column-reverse;
         gap: 20px;
         height: fit-content;
+        min-height: auto;
+        padding-block: 60px;
     }
 
     .Habilidades .right {
@@ -449,11 +471,10 @@ nav ul li a:focus {
     }
 
     .Habilidades .left img {
-        width: 100%;
-        width: 400px;
+        width: min(100%, 400px);
         position: relative;
         left: 0;
-        margin-bottom: -600px;
+        margin-bottom: 0;
     }
 }
 
@@ -493,12 +514,13 @@ nav ul li a:focus {
     position:relative;
     background:#f5f2e8;
     overflow:hidden;
+    width: 100%;
 }
 
 .Proyectos .title{
     position:absolute;
     top: 50px;
-    right: -100px;
+    right: clamp(20px, 5vw, 50px);
     margin-bottom: 5rem;
     /* z-index:10; */
 }
@@ -518,7 +540,7 @@ nav ul li a:focus {
     align-items:center;
     gap: 30px;
     margin-top: 2rem;
-    margin-left: -100px;
+    margin-left: 0;
 
     width:max-content;
 
@@ -579,6 +601,11 @@ nav ul li a:focus {
     margin-right: auto;
 }
 
+.content .Visitar.is-disabled{
+    cursor: default;
+    opacity: 0.65;
+}
+
 .links{
     display:flex;
     justify-content: center;
@@ -586,7 +613,8 @@ nav ul li a:focus {
     text-align:center;
 }
 
-.links a{
+.links a,
+.links span{
     text-decoration:none;
     color:#333;
 }
@@ -620,10 +648,13 @@ nav ul li a:focus {
 @media(max-width:900px){
 
     .Proyectos .title{
-        right:0;
+        position: relative;
+        top: auto;
+        right: auto;
         width:100%;
         text-align:center;
-        margin-top: 20px;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
 
     .Proyectos .title h2{
@@ -636,7 +667,21 @@ nav ul li a:focus {
     }
 
     .card{
-        width:280px;
+        width:min(280px, calc(100vw - 40px));
+    }
+
+    .cards{
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        padding: 0;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .card{
+        scroll-snap-align: center;
     }
 }
 
@@ -766,7 +811,7 @@ nav ul li a:focus {
     .Contacto{
         padding: 60px 20px;
         min-height: auto;
-        width: 90%;
+        width: 100%;
     }
 
     .Contacto h2{
@@ -796,7 +841,7 @@ nav ul li a:focus {
 
     .Contacto{
         padding: 50px 20px;
-        width: 90%;
+        width: 100%;
     }
 
     .Contacto h2{
@@ -867,6 +912,8 @@ footer p{
     display: flex;
     align-items: center;
     gap: 15px;
+    text-align: center;
+    padding-inline: 20px;
 }
 
 @media screen and (max-width: 900px) {

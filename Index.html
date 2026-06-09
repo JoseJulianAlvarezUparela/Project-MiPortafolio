@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,36 +15,15 @@
 </head>
 <body>
 
-    <!-- <header>
-        <nav class="navegation">
-
-            <img src="assets/Mi Logo con Nombre.svg" alt="" class="logo">
-
-            <ul class="links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-
-            <div class="icon">
-                <img src="assets/LInkeding.png" alt="">
-            </div>
-
-        </nav>
-
-    </header> -->
-
     <header id="header">
         <img src="assets/Mi Logo con Nombre.svg" alt="EL JOSE" class="logo">
 
         <nav>
             <ul>
-            <li><a href="#hero">Inicio</a></li>
-            <li><a href="#products">Productos</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
         
@@ -54,15 +33,14 @@
 
     </header>
 
-    <button class="panel-btn" id="panel-btn">☰</button>
+    <button class="panel-btn" id="panel-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
         <aside class="panel" id="panel">
         <nav class="menu">
-            <a href="#hero">Inicio</a>
-            <a href="#products">Productos</a>
-            <a href="#services">Servicios</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#contact">Contacto</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
         </nav>
         </aside>
 
@@ -78,7 +56,7 @@
                 <h1>Hola, Soy Jose</h1>
                 <p>Un <b>desarrollador Web</b>. Apasionado por nunca parar de aprender y crear soluciones que le ayuden a las personas. <b>¿Construimos algo juntos?</b></p>
                 <a href="#contacto" class="btn">Contáctame</a>
-                <a href="#contacto" class="btn">Mi Hoja de Vida</a>
+                <a href="assets/CV.svg" class="btn" target="_blank" rel="noopener">Mi Hoja de Vida</a>
             </div>
         </section>
 
@@ -122,10 +100,10 @@
 
                     <div class="content">
                         <h3>MEMORY GAME</h3>
-                        <a target="_blank" href="https://project-memory-card-mine.netlify.app/" class="Visitar">Visitar Proyecto</a>
+                        <a target="_blank" rel="noopener" href="https://project-memory-card-mine.netlify.app/" class="Visitar">Visitar Proyecto</a>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <a target="_blank" rel="noopener" href="https://project-memory-card-mine.netlify.app/">Práctica guiada</a>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -138,10 +116,10 @@
 
                     <div class="content">
                         <h3>TO-DO LIST</h3>
-                        <a target="_blank" href="https://todolist-practicaguiada.netlify.app/"  class="Visitar">Visitar Proyecto</a>
+                        <a target="_blank" rel="noopener" href="https://todolist-practicaguiada.netlify.app/"  class="Visitar">Visitar Proyecto</a>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <a target="_blank" rel="noopener" href="https://todolist-practicaguiada.netlify.app/">Práctica guiada</a>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -154,10 +132,10 @@
 
                     <div class="content">
                         <h3>COUNTRY GUIDE</h3>
-                        <a target="_blank" href="https://project-guide-country.netlify.app/" class="Visitar">Visitar Proyecto</a>
+                        <a target="_blank" rel="noopener" href="https://project-guide-country.netlify.app/" class="Visitar">Visitar Proyecto</a>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <a target="_blank" rel="noopener" href="https://project-guide-country.netlify.app/">Práctica guiada</a>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -171,10 +149,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -187,10 +165,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -203,10 +181,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -219,10 +197,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -235,10 +213,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -251,10 +229,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -267,10 +245,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -283,10 +261,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -299,10 +277,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -315,10 +293,10 @@
 
                     <div class="content">
                         <h3>PROYECTO</h3>
-                        <a target="_blank" href="#" class="Visitar">Visitar Proyecto</a>
+                        <span class="Visitar is-disabled">Próximamente</span>
                         <div class="links">
-                            <a href="#">Práctica guiada</a>
-                            <a href="#">Código Fuente</a>
+                            <span>Práctica guiada</span>
+                            <span>Código Fuente</span>
                         </div>
                     </div>
 
@@ -348,7 +326,7 @@
     </main>
 
         <footer>
-            <p>🌲 Gracias por pasar por este lugar. 🌲</p>
+            <p>Gracias por pasar por este lugar.</p>
         </footer>
         
         <script src="scripts/Script.js"></script>
