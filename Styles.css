@@ -178,7 +178,7 @@ nav ul li a:focus {
     position: fixed;
     z-index: 999;
     bottom: 5vh;
-    right: 15vw;
+    right: 10vw;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
