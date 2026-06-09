@@ -971,6 +971,8 @@ nav ul li a {
     .Contacto{
         padding: 50px 20px;
         width: 100%;
+        position: relative;
+            top: -50px;
     }
 
     .Contacto h2{
