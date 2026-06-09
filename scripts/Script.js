@@ -23,3 +23,27 @@ gsap.to(cards, {
         invalidateOnRefresh: true
     }
 });
+
+
+
+
+
+
+
+
+const btn = document.getElementById("panel-btn");
+const panel = document.getElementById("panel");
+const links = panel.querySelectorAll("a");
+
+btn.addEventListener("click", () => {
+  panel.classList.toggle("is-active");
+  document.body.classList.toggle("no-scroll");
+});
+
+// cerrar menú al dar clic en un link
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    panel.classList.remove("is-active");
+    document.body.classList.remove("no-scroll");
+  });
+});
