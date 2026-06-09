@@ -3,30 +3,25 @@ gsap.registerPlugin(ScrollTrigger);
 const cards = document.querySelector(".cards");
 
 if (cards) {
-  const mm = gsap.matchMedia();
+  const getScrollDistance = () => {
+    const viewportWidth = document.documentElement.clientWidth;
+    return Math.max(0, cards.scrollWidth - viewportWidth);
+  };
 
-  mm.add("(min-width: 901px)", () => {
-    const tween = gsap.to(cards, {
-      x: () => {
-        const distance = cards.scrollWidth - window.innerWidth;
-        return distance > 0 ? -distance : 0;
-      },
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".Proyectos",
-        start: "top top",
-        end: () => `+=${cards.scrollWidth}`,
-        pin: true,
-        scrub: 1,
-        invalidateOnRefresh: true
-      }
-    });
-
-    return () => {
-      tween.kill();
-      gsap.set(cards, { clearProps: "transform" });
-    };
+  gsap.to(cards, {
+    x: () => -getScrollDistance(),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".Proyectos",
+      start: "top top",
+      end: () => `+=${getScrollDistance()}`,
+      pin: true,
+      scrub: 1,
+      invalidateOnRefresh: true
+    }
   });
+
+  window.addEventListener("load", () => ScrollTrigger.refresh());
 }
 
 const btn = document.getElementById("panel-btn");

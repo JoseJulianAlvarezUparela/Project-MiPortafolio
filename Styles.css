@@ -647,6 +647,9 @@ nav ul li a:focus {
 /* RESPONSIVE */
 
 @media(max-width:900px){
+    .Proyectos{
+        padding-inline: 0;
+    }
 
     .Proyectos .title{
         position: relative;
@@ -668,21 +671,15 @@ nav ul li a:focus {
     }
 
     .card{
-        width:min(280px, calc(100vw - 40px));
+        width:min(280px, calc(100vw - 56px));
     }
 
     .cards{
-        width: 100%;
-        height: auto;
+        width: max-content;
+        height: 72vh;
         margin-top: 0;
-        padding: 0;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .card{
-        scroll-snap-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
