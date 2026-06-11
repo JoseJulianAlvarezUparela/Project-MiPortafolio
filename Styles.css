@@ -521,12 +521,16 @@ nav ul li a {
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 400px) {
     .Habilidades {
         flex-direction: column-reverse;
         height: 100vh;
         min-height: auto;
         margin-top: 100px;
+    }
+
+    .Habilidades .right ul {
+        margin-top: -100px;
     }
 
 }
