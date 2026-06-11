@@ -38,9 +38,6 @@ section {
 
 
 
-
-
-
 header {
     display: flex;
     align-items: center;
@@ -159,7 +156,6 @@ nav ul li a {
     opacity: 0;
     visibility: hidden;
     transition: transform 0.3s ease, opacity 0.5s ease;
-    /* Animación: que entre desde la izquierda */
     transform: translateX(-100%);
   }
 
@@ -186,7 +182,6 @@ nav ul li a {
     cursor: pointer;
   }
 
-  /* Bloquear scroll del body */
   .no-scroll {
     overflow: hidden;
   }
@@ -219,45 +214,6 @@ nav ul li a {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* HERO SECTION */
@@ -321,9 +277,9 @@ nav ul li a {
 
 @media(max-width:900px){
     .hero-Section{
-        height: 100vh;
+        min-height: 100vh;
         flex-direction: column;
-        margin-bottom: 50px;
+        margin-bottom: 300px;
     }
 
     .hero-Section .left img{
@@ -350,7 +306,6 @@ nav ul li a {
         display: inline-flex;
         justify-content: center;
         width: 100%;
-        
         max-width: 190px;
         padding: 10px 5px;
         margin-bottom: 10px;
@@ -361,9 +316,9 @@ nav ul li a {
 
 @media(max-width: 480px){
     .hero-Section{
-        height: 100vh;
+        min-height: 100svh;
         flex-direction: column;
-        margin-bottom: 170px;
+        margin-bottom: 0;
     }
 
     .hero-Section .left img{
@@ -390,43 +345,11 @@ nav ul li a {
         display: inline-flex;
         justify-content: center;
         width: 100%;
-        
         max-width: 120px;
         padding: 10px 5px;
         margin-bottom: 10px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* .Habilidades  */
@@ -482,15 +405,12 @@ nav ul li a {
 }
 
 
-
-
-
 @media screen and (max-width: 900px) {
     .Habilidades {
         flex-direction: column-reverse;
-        height: 100vh;
-        min-height: auto;
-        margin-top: 500px;
+        min-height: 100vh;
+        margin-top: 60px;
+        padding-block: 60px;
     }
 
     .Habilidades .right {
@@ -501,7 +421,6 @@ nav ul li a {
     .Habilidades .right h2 {
         font-size: 3rem;
         padding-left: 0;
-
     }
 
     .Habilidades .right ul {
@@ -519,53 +438,18 @@ nav ul li a {
 }
 
 
-
-
 @media screen and (max-width: 400px) {
     .Habilidades {
         flex-direction: column-reverse;
-        height: 100vh;
-        min-height: auto;
-        margin-top: 100px;
+        min-height: 100svh;
+        margin-top: 40px;
+        padding-block: 40px;
     }
 
     .Habilidades .right ul {
-        margin-top: -100px;
+        margin-top: 0;
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .Proyectos{
@@ -604,8 +488,6 @@ nav ul li a {
 
     padding-left:10vw;
     padding-right:10vw;
-
-    /* height: 80vh; */
 }
 
 .card{
@@ -684,11 +566,11 @@ nav ul li a {
 }
 
 
-
-
-@media screen  and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .Proyectos{
         padding-inline: 0;
+        min-height: 100vh;
+        height: auto;
     }
 
     .Proyectos .title{
@@ -712,7 +594,6 @@ nav ul li a {
 
     .Proyectos .cards .card{
         width: 300px;
-        /* height: 550px; */
     }
 
     .cards{
@@ -722,16 +603,19 @@ nav ul li a {
         margin-top: 0;
         padding-left: 20px;
         padding-right: 20px;
-
     }
-    
 }
 
-@media screen  and (max-width: 500px) {
-    
+@media screen and (max-width: 500px) {
+    .Proyectos{
+        min-height: 100svh;
+        height: auto;
+    }
+
     .Proyectos .cards .card{
         width: 300px;
-        height: 65vh;
+        height: auto;
+        min-height: 55vh;
     }
 
     .cards{
@@ -741,53 +625,8 @@ nav ul li a {
         margin-top: 0;
         padding-left: 20px;
         padding-right: 20px;
-
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* CONTACTO */
@@ -806,8 +645,6 @@ nav ul li a {
 .contacto h2{
     font-size:4rem;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:900px){
     .Proyectos{
@@ -835,45 +672,6 @@ nav ul li a {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* CONTACTO  */
 
 
@@ -888,7 +686,6 @@ nav ul li a {
     padding-top: 40px;
 }
 
-/* TITULO */
 .Contacto h2{
     font-size: 4rem;
     color: #000;
@@ -896,7 +693,6 @@ nav ul li a {
     margin-bottom: 60px;
 }
 
-/* FORM */
 .Contacto form{
     width: 100%;
     max-width: 600px;
@@ -906,7 +702,6 @@ nav ul li a {
     gap: 40px;
 }
 
-/* INPUTS */
 .Contacto input,
 .Contacto textarea{
     width: 100%;
@@ -922,13 +717,11 @@ nav ul li a {
     outline: none;
 }
 
-/* TEXTAREA */
 .Contacto textarea{
     resize: none;
     height: 60px;
 }
 
-/* BOTON */
 .Contacto button{
     width: 180px;
     height: 70px;
@@ -950,16 +743,11 @@ nav ul li a {
 }
 
 
-/* =========================
-   RESPONSIVE CONTACTO
-========================= */
-
-/* Tablets */
 @media (max-width: 900px){
 
     .Contacto{
         padding: 60px 20px;
-        min-height: auto;
+        min-height: 100vh;
         width: 100%;
         position: relative;
     }
@@ -986,11 +774,11 @@ nav ul li a {
     }
 }
 
-/* Celulares */
 @media (max-width: 480px){
 
     .Contacto{
         padding: 50px 20px;
+        min-height: 100svh;
         width: 100%;
         position: relative;
     }
@@ -1023,24 +811,6 @@ nav ul li a {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer{
     width: 100%;
     background: #ddd8cb;
@@ -1071,5 +841,32 @@ footer p{
 @media screen and (max-width: 900px) {
     footer p{
         font-size: 2rem;
+    }
+}
+
+
+/* ── iPAD (768px – 1024px) ── */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .hero-Section {
+        min-height: 100vh;
+        gap: 30px;
+        padding: 40px clamp(20px, 5vw, 50px);
+    }
+
+    .Habilidades {
+        min-height: 100vh;
+        margin-top: 0;
+        padding-block: 60px;
+    }
+
+    .Proyectos {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .Contacto {
+        min-height: 100vh;
+        padding-block: 60px;
     }
 }
