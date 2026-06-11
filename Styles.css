@@ -32,8 +32,10 @@ main {
 
 section {
     width: 100%;
+    height: 100vh;
     padding: 100px clamp(20px, 5vw, 50px);
 }
+
 
 
 
@@ -53,7 +55,7 @@ header {
 
 
 .logo {
-    height: 80px;
+    height: auto;
     width: auto;
     display: block;
 }
@@ -321,8 +323,7 @@ nav ul li a {
     .hero-Section{
         height: 100vh;
         flex-direction: column;
-        margin-top: -100px;
-        margin-bottom: 170px;
+        margin-bottom: 50px;
     }
 
     .hero-Section .left img{
@@ -362,7 +363,6 @@ nav ul li a {
     .hero-Section{
         height: 100vh;
         flex-direction: column;
-        margin-top: -100px;
         margin-bottom: 170px;
     }
 
@@ -485,11 +485,9 @@ nav ul li a {
 @media screen and (max-width: 900px) {
     .Habilidades {
         flex-direction: column-reverse;
-        gap: 20px;
         height: 100vh;
         min-height: auto;
-        padding-block: 60px;
-        height: 100vh;
+        margin-top: 500px;
     }
 
     .Habilidades .right {
@@ -500,11 +498,13 @@ nav ul li a {
     .Habilidades .right h2 {
         font-size: 3rem;
         padding-left: 0;
+
     }
 
     .Habilidades .right ul {
         padding-left: 0;
         list-style: none;
+        margin-top: -10px;
     }
 
     .Habilidades .left img {
@@ -515,11 +515,7 @@ nav ul li a {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .Habilidades .left img {
-        width: 300px;
-    }
-}
+
 
 
 
@@ -695,9 +691,28 @@ nav ul li a {
         margin:auto;
     }
 
-    .card{
-        width: 500px;
-        height: 50vh;
+    .Proyectos .cards .card{
+        width: 300px;
+        /* height: 550px; */
+    }
+
+    .cards{
+        width: max-content;
+        height: auto;
+        width: fit-content;
+        margin-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+    
+}
+
+@media screen  and (max-width: 500px) {
+    
+    .Proyectos .cards .card{
+        width: 300px;
+        height: 65vh;
     }
 
     .cards{
@@ -797,18 +812,6 @@ nav ul li a {
     .Proyectos .title .line{
         width:220px;
         margin:auto;
-    }
-
-    .card{
-        width:min(280px, calc(100vw - 56px));
-    }
-
-    .cards{
-        width: max-content;
-        /* height: 72vh; */
-        margin-top: 0;
-        padding-left: 20px;
-        padding-right: 20px;
     }
 }
 
@@ -940,7 +943,6 @@ nav ul li a {
         min-height: auto;
         width: 100%;
         position: relative;
-            top: -200px;
     }
 
     .Contacto h2{
@@ -972,7 +974,6 @@ nav ul li a {
         padding: 50px 20px;
         width: 100%;
         position: relative;
-            top: -50px;
     }
 
     .Contacto h2{
@@ -1024,7 +1025,7 @@ nav ul li a {
 footer{
     width: 100%;
     background: #ddd8cb;
-    height: 80px;
+    height: 100px;
 
     padding: 2px 0;
 
@@ -1036,7 +1037,7 @@ footer{
 }
 
 footer p{
-    font-size: 28px;
+    font-size: 3rem;
     font-weight: 300;
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
@@ -1050,6 +1051,6 @@ footer p{
 
 @media screen and (max-width: 900px) {
     footer p{
-        font-size: 18px;
+        font-size: 2rem;
     }
 }
