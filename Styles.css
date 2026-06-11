@@ -361,9 +361,9 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+/* 
     padding: 0 clamp(20px, 8vw, 8%);
-    gap: 40px;
+    gap: 40px; */
 }
 
 /* TEXTO */
@@ -408,8 +408,8 @@ nav ul li a {
 @media screen and (max-width: 900px) {
     .Habilidades {
         flex-direction: column-reverse;
-        min-height: 100vh;
-        margin-top: 60px;
+        min-height: auto;
+        margin-top: -300px;
         padding-block: 60px;
     }
 
@@ -566,7 +566,7 @@ nav ul li a {
 }
 
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .Proyectos{
         padding-inline: 0;
         min-height: 100vh;
@@ -626,7 +626,7 @@ nav ul li a {
         padding-left: 20px;
         padding-right: 20px;
     }
-}
+} */
 
 
 /* CONTACTO */
