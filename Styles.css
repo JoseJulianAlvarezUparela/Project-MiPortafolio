@@ -466,19 +466,13 @@ nav ul li a {
     position:absolute;
     top: 1rem;
     right: clamp(20px, 5vw, 50px);
-    /* margin-bottom: 5rem; */
+    margin-bottom: 5rem;
 }
 
 .Proyectos .title h2{
     font-size: 4rem;
+    text-align: right;
 }
-
-.Proyectos .title .line{
-    width: 400px;
-    height: 2px;
-}
-
-
 
 .cards{
     display:flex;
@@ -769,10 +763,4 @@ footer p{
     gap: 15px;
     text-align: center;
     padding-inline: 20px;
-}
-
-@media screen and (max-width: 900px) {
-    footer p{
-        font-size: 2rem;
-    }
 }
