@@ -508,7 +508,7 @@ nav ul li a {
     object-fit:cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .cards {
         padding-left: 5vw;
         padding-right: 5vw;
