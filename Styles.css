@@ -528,6 +528,13 @@ nav ul li a {
 }
 
 
+@media (max-width: 468px) {
+    .card{
+    width: 270px;
+    height: 420px;
+    }    
+}
+
 
 
 
