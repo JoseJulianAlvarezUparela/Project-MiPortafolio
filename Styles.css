@@ -526,14 +526,19 @@ nav ul li a {
         height: 45vw;        /* proporcional al ancho de la card */
         object-fit: cover;
     }
+
+    .card .content h3{
+        font-size: 4rem;
+    }
 }
 
 
-@media (max-width: 468px) {
+@media (max-width: 550px) {
     .card{
     width: 270px;
     height: 420px;
     }    
+
 }
 
 
@@ -549,7 +554,7 @@ nav ul li a {
 .content h3{
     text-align:center;
     margin-top: -10px;
-    margin-bottom:20px;
+    margin-bottom :20px;
     font-size: 2.1rem;
 }
 
@@ -596,7 +601,36 @@ nav ul li a {
 }
 
 
+@media (max-width: 900px) {
+    .content h3 {
+        font-size: 1.8rem;
+    }
 
+    .content .Visitar {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .content .Visitar {
+        font-size: .5rem;
+    }   
+}
+
+
+@media (max-width: 550px) {
+    .cards .content h3 {
+        font-size: 1.8rem;
+    }
+
+    .content .Visitar {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .content .Visitar {
+        font-size: 1rem;
+    }   
+}
 
 
 
