@@ -408,7 +408,7 @@ nav ul li a {
         min-height: auto;
         margin-top: 15px;
         padding-block: 60px;
-        margin-top: -500px
+        margin-top: -400px
     }
 
     .Habilidades .right {
@@ -530,6 +530,7 @@ nav ul li a {
     .card .content h3{
         font-size: 4rem;
     }
+
 }
 
 
@@ -612,8 +613,15 @@ nav ul li a {
     }
 
     .content .Visitar {
-        font-size: .5rem;
+        font-size: 2rem;
     }   
+
+    .links a,
+    .links span{
+        font-size: 2rem;
+        text-decoration:none;
+        color:#333;
+    }
 }
 
 
@@ -703,7 +711,7 @@ nav ul li a {
 
 .Contacto textarea{
     resize: none;
-    height: 60px;
+    height: 300px;
 }
 
 .Contacto button{
